@@ -1,0 +1,41 @@
+.popup__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all;
+}
+
+.popup__bg.active {
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
+}
+
+.popup {
+  position: absolute;
+  top: 420px;
+  left: 550px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 822.5px;
+  height: 573px;
+  border-radius: 40px;
+  padding: 25px;
+  transition: 0.5s all;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%);
+  transition: 0.5s all;
+}
+
+.close-popup {
+  position: absolute;
+  top: 33px;
+  right: 32.5px;
+}
