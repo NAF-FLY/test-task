@@ -1,6 +1,7 @@
 const slider = document.querySelector(".slider-container"),
-  slides = Array.from(document.querySelectorAll(".slide"));
-header = document.querySelector(".header-icon");
+  slides = Array.from(document.querySelectorAll(".slide")),
+  header = document.querySelector(".header-icon"),
+  btnNext = document.querySelector(".button-next");
 
 let isDragging = false,
   startPos = 0,
@@ -26,6 +27,12 @@ header.addEventListener("click", () => {
   slider.style.transform = "translateX(0)";
   currentTranslate = 0;
   prevTranslate = 0;
+});
+
+btnNext.addEventListener("click", () => {
+  slider.style.transform = "translateX(-1024px)";
+  currentTranslate = -1024;
+  prevTranslate = -1024;
 });
 
 function touchStart(index) {
