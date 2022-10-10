@@ -1,5 +1,6 @@
 const slider = document.querySelector(".slider-container"),
   slides = Array.from(document.querySelectorAll(".slide"));
+header = document.querySelector(".header-icon");
 
 let isDragging = false,
   startPos = 0,
@@ -21,15 +22,19 @@ slides.forEach((slide, index) => {
   slide.addEventListener("mousemove", touchMove);
 });
 
+header.addEventListener("click", () => {
+  slider.style.transform = "translateX(0)";
+  currentTranslate = 0;
+  prevTranslate = 0;
+});
+
 function touchStart(index) {
   return function (event) {
     currentIndex = index;
     startPos = getPositionX(event);
     isDragging = true;
 
-    // https://css-tricks.com/using-requestanimationframe/
     animationID = requestAnimationFrame(animation);
-    slider.classList.add("grabbing");
   };
 }
 
@@ -65,7 +70,13 @@ function animation() {
 }
 
 function setSliderPosition() {
-  slider.style.transform = `translateX(${currentTranslate}px)`;
+  slider.style.transform = `translateX(${
+    currentTranslate > 0
+      ? 0
+      : currentTranslate && currentTranslate < -3100
+      ? -3100
+      : currentTranslate
+  }px)`;
 }
 
 function setPositionByIndex() {
@@ -73,36 +84,3 @@ function setPositionByIndex() {
   prevTranslate = currentTranslate;
   setSliderPosition();
 }
-
-// Popup
-
-let popupBg = document.querySelector(".popup__bg");
-let popup = document.querySelector(".popup");
-let messageText = document.querySelector(".main-message");
-let messageText1 = document.querySelector(".main-message1");
-let openPopupButtons = document.querySelectorAll(".button-more");
-let closePopupButton = document.querySelector(".close-popup");
-
-openPopupButtons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    messageText.classList.add("hide");
-    messageText1.classList.remove("hide");
-    popupBg.classList.add("active");
-    popup.classList.add("active");
-  });
-});
-
-closePopupButton.addEventListener("click", () => {
-  messageText1.classList.add("hide");
-  messageText.classList.remove("hide");
-  popupBg.classList.remove("active");
-  popup.classList.remove("active");
-});
-
-document.addEventListener("click", (e) => {
-  if (e.target === popupBg) {
-    popupBg.classList.remove("active");
-    popup.classList.remove("active");
-  }
-});

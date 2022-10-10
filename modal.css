@@ -39,3 +39,59 @@
   top: 33px;
   right: 32.5px;
 }
+
+.container-carousel {
+  display: flex;
+  position: relative;
+  color: #000;
+  top: 170px;
+  left: 185px;
+  font-size: 21px;
+  height: 327.5px;
+  width: 550px;
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+
+.number {
+  color: #8cc9e8;
+}
+
+.item-text {
+  margin-top: 5px;
+}
+
+.item {
+  margin-top: 10px;
+}
+
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+}
+
+.dot {
+  width: 10.5px;
+  height: 10.5px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  margin-right: 4.5px;
+  margin-left: 4.5px;
+}
+.arrow {
+  margin-left: 14.5px;
+  margin-right: 14.5px;
+}
+
+.arrow:first-child {
+  margin-left: 0;
+}
+
+.dot.active {
+  border: none;
+  background-color: #fc6da9;
+  width: 11.5px;
+  height: 11.5px;
+}

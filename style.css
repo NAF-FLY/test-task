@@ -145,20 +145,27 @@ span {
 
 .image2 {
   position: absolute;
-  bottom: 185px;
-  left: 20px;
+  bottom: 165px;
+  left: 30px;
+  animation: 6s linear infinite bakteri_1;
+  animation-delay: 5s;
 }
 
 .image3 {
   position: absolute;
   top: 60px;
   right: 250px;
+  animation: 10s linear infinite bakteri_2;
+  animation-delay: 5s;
 }
 
 .image4 {
   position: absolute;
   top: 215px;
   right: 50px;
+  animation: 10s linear infinite bakteri_3;
+  animation-delay: 5s;
+  z-index: 10;
 }
 
 .image5 {
@@ -171,6 +178,8 @@ span {
   position: absolute;
   bottom: 0;
   right: 300px;
+  animation: 10s linear infinite bakteri_4;
+  animation-delay: 5s;
 }
 
 .image7 {
@@ -197,30 +206,40 @@ span {
   position: absolute;
   top: 100px;
   right: 0;
+  animation: 3s linear pink_sperm_1;
+  animation-delay: 2s;
 }
 
 .image11 {
   position: absolute;
   top: 100px;
   right: 0;
+  animation: 3s linear pink_sperm_1;
+  animation-delay: 2s;
 }
 
 .image12 {
   position: absolute;
   top: 75px;
   right: 0;
+  animation: 4s linear pink_sperm_2;
+  animation-delay: 2s;
 }
 
 .image13 {
   position: absolute;
   bottom: 250px;
   right: 0;
+  animation: 3s linear pink_sperm_3;
+  animation-delay: 2s;
 }
 
 .image14 {
   position: absolute;
   bottom: 150px;
   right: 0;
+  animation: 3s linear pink_sperm_4;
+  animation-delay: 2s;
 }
 
 .image15 {
@@ -235,6 +254,7 @@ span {
   left: 74px;
   top: 244px;
   z-index: 2;
+  animation: 6s linear infinite bubble_6;
 }
 
 .image17 {
@@ -242,6 +262,7 @@ span {
   left: 190px;
   top: 340px;
   z-index: 2;
+  animation: 6s linear infinite bubble_5;
 }
 
 .image18 {
@@ -249,6 +270,7 @@ span {
   left: 200px;
   top: 95px;
   z-index: 2;
+  animation: 5s linear infinite bubble_8;
 }
 
 .image19 {
@@ -256,6 +278,7 @@ span {
   left: 245px;
   bottom: 120px;
   z-index: 2;
+  animation: 5s linear infinite bubble_3;
 }
 
 .image20 {
@@ -263,6 +286,7 @@ span {
   left: 185px;
   top: 180px;
   z-index: 11;
+  animation: 10s linear infinite bubble_7;
 }
 
 .image21 {
@@ -270,6 +294,7 @@ span {
   left: 200px;
   bottom: 0;
   z-index: 11;
+  animation: 4s linear infinite bubble_1;
 }
 
 .image22 {
@@ -277,6 +302,7 @@ span {
   left: 10px;
   bottom: 260px;
   z-index: 11;
+  animation: 6s linear infinite bubble_4;
 }
 
 .image23 {
@@ -284,6 +310,7 @@ span {
   left: 25px;
   bottom: 130px;
   z-index: 11;
+  animation: 7s linear infinite bubble_2;
 }
 
 .scroll-container {
@@ -422,6 +449,7 @@ span {
 
 .main-message {
   position: relative;
+  width: 400px;
   left: 280px;
   top: 170px;
 }
@@ -429,7 +457,7 @@ span {
 .main-message1 {
   width: 50%;
   position: relative;
-  display: block;
+  width: 400px;
   left: 280px;
   top: 170px;
   z-index: 2;
@@ -455,4 +483,315 @@ span {
 
 .main-message1.hide {
   display: none;
+}
+
+@keyframes bakteri_1 {
+  0% {
+    bottom: 150px;
+    left: 50px;
+  }
+  50% {
+    bottom: 200px;
+    left: 20px;
+  }
+
+  100% {
+    bottom: 150px;
+    left: 50px;
+  }
+}
+
+@keyframes bakteri_2 {
+  0% {
+    top: 60px;
+    right: 250px;
+  }
+  50% {
+    top: 80px;
+    right: 220px;
+    scale: 1.3;
+  }
+
+  100% {
+    top: 60px;
+    right: 250px;
+    scale: 1;
+  }
+}
+
+@keyframes bakteri_3 {
+  0% {
+    top: 215px;
+    right: 50px;
+  }
+
+  25% {
+    top: 160px;
+    right: 80px;
+  }
+
+  50% {
+    top: 130px;
+    right: 120px;
+  }
+
+  75% {
+    top: 160px;
+    right: 80px;
+  }
+
+  100% {
+    top: 215px;
+    right: 50px;
+  }
+}
+
+@keyframes bakteri_4 {
+  0% {
+    bottom: -20px;
+    right: 300px;
+    scale: 0.8;
+  }
+  50% {
+    bottom: -20px;
+    right: 280px;
+    scale: 1.2;
+  }
+
+  100% {
+    bottom: -20px;
+    right: 300px;
+    scale: 0.8;
+  }
+}
+
+@keyframes pink_sperm_1 {
+  0% {
+    top: 150px;
+    right: -50px;
+    opacity: 0;
+  }
+  50% {
+    top: 120px;
+    right: -20px;
+    opacity: 0.5;
+  }
+
+  100% {
+    top: 100px;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes pink_sperm_2 {
+  0% {
+    top: 100px;
+    right: -15px;
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    top: 85px;
+    right: -5px;
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    top: 75px;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes pink_sperm_3 {
+  0% {
+    bottom: 180px;
+    right: -80px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 200px;
+    right: -40px;
+    opacity: 0.5;
+  }
+
+  100% {
+    bottom: 250px;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes pink_sperm_4 {
+  0% {
+    bottom: 100px;
+    right: -80px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 125px;
+    right: -40px;
+    opacity: 0.5;
+  }
+
+  100% {
+    bottom: 150px;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes bubble_1 {
+  0% {
+    left: 200px;
+    bottom: -10px;
+    scale: 0.8;
+  }
+  50% {
+    left: 200px;
+    bottom: -10px;
+    scale: 1.2;
+  }
+
+  100% {
+    left: 200px;
+    bottom: -10px;
+    scale: 0.8;
+  }
+}
+
+@keyframes bubble_2 {
+  0% {
+    left: 25px;
+    bottom: 130px;
+    scale: 1;
+  }
+  50% {
+    left: 60px;
+    bottom: 180px;
+    scale: 1.2;
+  }
+
+  100% {
+    left: 25px;
+    bottom: 130px;
+    scale: 1;
+  }
+}
+
+@keyframes bubble_3 {
+  0% {
+    left: 245px;
+    bottom: 120px;
+  }
+  50% {
+    left: 270px;
+    bottom: 130px;
+  }
+
+  100% {
+    left: 245px;
+    bottom: 120px;
+  }
+}
+
+@keyframes bubble_4 {
+  0% {
+    left: 10px;
+    bottom: 260px;
+  }
+  50% {
+    left: 50px;
+    bottom: 250px;
+  }
+
+  100% {
+    left: 10px;
+    bottom: 260px;
+  }
+}
+
+@keyframes bubble_5 {
+  0% {
+    left: 190px;
+    top: 340px;
+  }
+  50% {
+    left: 190px;
+    top: 360px;
+    scale: 0.7;
+  }
+
+  100% {
+    left: 190px;
+    top: 340px;
+  }
+}
+
+@keyframes bubble_6 {
+  0% {
+    left: 74px;
+    top: 244px;
+  }
+  50% {
+    left: 100px;
+    top: 264px;
+  }
+
+  100% {
+    left: 74px;
+    top: 244px;
+  }
+}
+
+@keyframes bubble_7 {
+  0% {
+    left: 185px;
+    top: 180px;
+  }
+  25% {
+    left: 240px;
+    top: 240px;
+  }
+
+  50% {
+    left: 200px;
+    top: 200px;
+  }
+
+  75% {
+    left: 185px;
+    top: 160px;
+  }
+
+  100% {
+    left: 185px;
+    top: 180px;
+  }
+}
+
+@keyframes bubble_8 {
+  0% {
+    left: 190px;
+    top: 95px;
+  }
+
+  50% {
+    left: 240px;
+    top: 130px;
+  }
+
+  100% {
+    left: 190px;
+    top: 95px;
+  }
 }
